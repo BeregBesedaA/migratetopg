@@ -1,0 +1,27 @@
+<h1>Listing pg_firsts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pg_firsts.each do |pg_first| %>
+      <tr>
+        <td><%= pg_first.name %></td>
+        <td><%= link_to 'Show', pg_first %></td>
+        <td><%= link_to 'Edit', edit_pg_first_path(pg_first) %></td>
+        <td><%= link_to 'Destroy', pg_first, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pg first', new_pg_first_path %>

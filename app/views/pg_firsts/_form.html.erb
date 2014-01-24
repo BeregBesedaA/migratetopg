@@ -1,0 +1,21 @@
+<%= form_for(@pg_first) do |f| %>
+  <% if @pg_first.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pg_first.errors.count, "error") %> prohibited this pg_first from being saved:</h2>
+
+      <ul>
+      <% @pg_first.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
